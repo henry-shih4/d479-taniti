@@ -4,6 +4,7 @@ body {
   font-family: "Playfair Display", serif;
   box-sizing: border-box;
   padding: 0;
+  color: #222222; 
 }
 
 
@@ -30,7 +31,7 @@ h2{
   justify-content: space-between;
   align-items: center;
   background-color: #d4fcf568;
-  color: black;
+  color: #222222; 
   padding: 0.8em 1.5em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -44,7 +45,7 @@ h2{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
-  color: black;
+  color: #222222; 
 }
 
 .nav-links {
@@ -59,7 +60,7 @@ h2{
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: #222222; 
   font-size: 1rem;
   transition: color 0.3s ease;
 }
@@ -83,7 +84,7 @@ h2{
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: black;
+  background-color: #222222; 
 }
 
 
@@ -182,7 +183,7 @@ h2{
 
 .button:hover,
 .button-2:hover {
-  background-color: black;
+  background-color: #222222; 
   color: white;
   transition: color 0.3s ease;
   transition: background-color 0.3s ease;
@@ -210,6 +211,13 @@ h2{
   width: 90%;
   background-color: #eceded;
   margin: 2rem auto;
+}
+
+.divider-small{
+  height: 2px;
+  width: 80%;
+  background-color: #222222;
+  margin: 1rem auto;
 }
 
 .hide-divider{
@@ -559,7 +567,7 @@ h2{
 }
 
 .footer-section h4 {
-  color: black;
+  color: #222222; 
   font-size: 1.2rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -575,7 +583,7 @@ h2{
 }
 
 .footer-section a {
-  color: black;
+  color: #222222; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -590,7 +598,7 @@ h2{
 }
 
 .social-links a {
-  color: black;
+  color: #222222; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
