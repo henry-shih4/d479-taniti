@@ -1,0 +1,745 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+
+
+/* global styles */
+
+p{
+  font-size: 16px;
+}
+
+h2{
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+
+.center{
+  text-align: center;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4fcf568;
+  color: black;
+  padding: 0.8em 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a7a085; /* Tropical accent yellow */
+}
+
+
+
+/* navbar responsive */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #d4fcf5;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: 16px 0;
+    display:block;
+  }
+}
+
+/* header styles */
+
+.header {
+  width: 100%;
+  background-image: url("images/taniti-background.jpg");
+  background-size: cover;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  height: 85vh;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.header h1 {
+  padding-top: 1em;
+  margin: 0;
+  font-size: 60px;
+  letter-spacing: 4px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #248232;
+  color: white; /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  padding: 12px 24px; /* Button size */
+  font-size: 1rem; /* Text size */
+  font-weight: bold; /* Emphasize the text */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  text-align: center; /* Center-align text */
+}
+
+.button-2 {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f68e5f;
+  color: white; /* White text for contrast */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px; /* Button size */
+  font-size: 0.8rem; /* Text size */
+  font-weight: bold; /* Emphasize the text */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  text-align: center; /* Center-align text */
+}
+
+.button:hover,
+.button-2:hover {
+  background-color: black;
+  color: white;
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+/* container */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.about-container p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  height: 4px;
+  width: 90%;
+  background-color: #eceded;
+  margin: 2rem auto;
+}
+
+.hide-divider{
+  display: none;
+}
+
+
+
+/* cards section */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  width: 80%;
+  margin: auto;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.card h3,
+.small-card h3 {
+  text-decoration: underline;
+  margin-bottom:1rem;
+}
+
+
+.card div,
+.small-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  gap: 1rem;
+}
+
+.card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+#faq {
+  margin: 2rem auto;
+  width: 400px;
+  height: 200px;
+  background-color: #3569e268;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
+
+/* attractions page */
+
+.attractions-header::before,
+.accommodations-header::before,
+.food-header::before,
+.transportation-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.attractions-header {
+  width: 100;
+  background-image: url("images/rainforest-header.jpg");
+  background-size: cover;
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.attractions-header-content {
+  position: relative;
+  z-index: 2; /* Brings the text above the gradient */
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.accommodations-header {
+  width: 100;
+  background-image: url("images/accommodations-header.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.acc-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.acc-card {
+  gap: 4rem;
+  max-width: 800px;
+  flex-direction: row;
+}
+
+/* food page */
+
+.food-header {
+  width: 100;
+  background-image: url("images/food-header.jpg");
+  background-size: cover;
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem;
+  gap: 2rem;
+}
+
+.food-gallery img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.food-gallery-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:2rem;
+}
+
+.food-gallery-container h3{
+  margin:0;
+  text-decoration: underline;
+}
+
+
+/* transportation page */
+
+.transportation-header {
+  width: 100;
+  background-image: url("images/transportation-header.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px;
+}
+
+.small-card img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+/* faq page */
+
+#faq{
+  max-width: 350px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+ width: 300px;
+  gap: 1rem;
+  text-align: left;
+}
+
+
+/* Contact Form Styles */
+.contact {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.contact form label {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 0.8rem;
+  border: 2px solid #4bc2ae;
+  border-radius: 5px;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: #248232;
+}
+
+.contact form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact form {
+    width: 100%;
+  }
+
+  .contact form button {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+.faq-container {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.qa-block {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.question {
+  font-size: 18px;
+  padding: 1rem;
+}
+
+.answer {
+  font-size: px;
+  padding: 1rem;
+}
+
+.bold {
+  padding-right: 1rem;
+  font-weight: 700;
+}
+
+
+
+
+
+/* footer */
+
+.footer {
+  background-color: #d4fcf568;
+  padding: 2rem 0 1rem 0;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  margin: 1rem;
+  min-width: 250px;
+}
+
+.footer-section h4 {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a7a085;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #a7a085;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+
+
+.header-mobile p{
+  padding: 0 1rem;
+}
+
+
+.header-mobile{
+  display: none;
+}
+
+.header-mobile img{
+  width:100%;
+}
+
+
+/* Responsive Design mobile*/
+
+@media (max-width: 400px) {
+img{
+  max-width: 350px;
+}
+
+p{
+  font-size: 14px;
+  text-align: center;
+}
+
+.acc-card-container{
+  gap: 0;
+}
+
+
+.acc-card h3, .food-gallery h3{
+ margin:0; 
+}
+
+.divider{
+  margin: 1rem auto;
+}
+}
+
+
+/* Responsive Design tablet/desktop*/
+
+@media (max-width: 768px) {
+
+.header{
+  display: none;
+}
+
+.header-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+  .nav-links li {
+    margin: 1em 0;
+  }
+
+  .header {
+    background-size: contain;
+    height: 70vh;
+  }
+
+
+  .about-container{
+    width:80%;
+  
+  }
+
+  #card-container {
+    gap: 4rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+
+  .acc-card{
+    gap: 1rem;
+  }
+
+  .acc-card img{
+    margin-top: 1rem;
+  }
+
+
+  .card img{
+    height: 260px;
+  }
+
+
+  .acc-card {
+
+  flex-direction: column;
+
+  }
+
+  .reverse{
+
+    flex-direction: column-reverse;
+  }
+
+  .hide-divider{
+    display: block;
+  }
+
+
+}
