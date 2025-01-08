@@ -7,11 +7,20 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Visit Taniti</title>
+
+
+    <script>
+      // local development and github pages
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        document.write('<base href="/" />');
+      } else {
+        document.write('<base href="/d479-taniti/" />');
+      }
+    </script>
   </head>
   <body>
     <nav class="navbar">
-          <div class="logo"> <a href="/index.html">Visit Taniti</a></div>
+          <div class="logo"> <a href="index.html">Visit Taniti</a></div>
           <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -19,12 +28,12 @@
           </div>
 
   <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-    <li><a href="/accommodations.html">Accommodations</a></li>
-    <li><a href="/food.html">Food</a></li>
-    <li><a href="/attractions.html">Attractions</a></li>
-    <li><a href="/transportation.html">Transportation</a></li>
-    <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="index.html">Home</a></li>
+    <li><a href="accommodations.html">Accommodations</a></li>
+    <li><a href="food.html">Food</a></li>
+    <li><a href="attractions.html">Attractions</a></li>
+    <li><a href="transportation.html">Transportation</a></li>
+    <li><a href="faq.html">FAQ</a></li>
   </ul>
   </div>
     </nav>
@@ -59,7 +68,7 @@
       </div>
       <div>
         <img />
-        <a class="button" href="/attractions.html">Our Favorite Sights</a>
+        <a class="button" href="attractions.html">Our Favorite Sights</a>
       </div>
     </main>
 
@@ -71,7 +80,7 @@
       <div>
         <img src="images/taniti-villa.jpg" alt="taniti-villa" />
         <p>We offer a wide variety of lodging from budget friendy to luxury. There's a spot for everyone here.</p>
-        <a class="button" href="/accommodations.html">Learn More</a>
+        <a class="button" href="accommodations.html">Learn More</a>
       </div>
     </section>
 
@@ -80,7 +89,7 @@
       <div>
         <img src="images/taniti-fish-dish.jpg" alt="taniti-fish-dish" />
         <p>Taniti has multiple famous restaurants known for their seafood and Pan-Asian cuisine. Try our local fish dishes you can't find anywhere else!</p>
-       <a class="button" href="/food.html">Our Food</a>
+       <a class="button" href="food.html">Our Food</a>
       </div>
     </section>
 
@@ -90,7 +99,7 @@
       <div>
         <img src="images/taniti-rainforest.jpg" alt="taniti-rainforest" />
         <p>From lush rainforests to an active volcano, Taniti offers adventures for every traveler.</p>
-         <a class="button" href="/attractions.html">Discover Taniti</a>
+         <a class="button" href="attractions.html">Discover Taniti</a>
       </div>
     </section>
 
@@ -99,7 +108,7 @@
       <div>
         <img src="images/taniti-bus.jpg" alt="taniti-bus" />
         <p>Taniti is a walkable city, however there are other options like our local bus system</p>
-       <a class="button" href="/transportation.html">Learn More</a>
+       <a class="button" href="transportation.html">Learn More</a>
       </div>
     </section>
 
@@ -110,7 +119,7 @@
     <div class="divider"></div>
            <section id="faq">
       <h3>Need more help?</h3>
-             <a class="button" href="/faq.html">Visit our FAQ's</a>
+             <a class="button" href="faq.html">Visit our FAQ's</a>
     </section>
  
 
@@ -119,11 +128,11 @@
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/accommodations.html">Accommodations</a></li>
-            <li><a href="/food.html">Food</a></li>
-            <li><a href="/attractions.html">Attractions</a></li>
-            <li><a href="/transportation.html">Transportation</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="accommodations.html">Accommodations</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="transportation.html">Transportation</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div>
         
@@ -168,5 +177,8 @@
       hamburger.classList.remove("active");
       navLinks.classList.remove("active");
     }));
+
+
+    
   </script>
 </html>
